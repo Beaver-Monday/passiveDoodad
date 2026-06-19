@@ -3,45 +3,96 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>passiveDoodad</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>passiveDoodad</title>
+  </head>
 
-<div class="page-background">
-	<div class="content-wrapper">
-		 <div class="header-box">
-      
-    	</div>
-	</div>
-</div>
+  <body>
+    <div class="page-background">
+      <div class="content-wrapper">
+        <div class="header-box"></div>
 
+        <div class="layout-grid">
+          <div class="main-content">
+            <div class="page-buttons-box">
+              <a href="/page-one" class="btn-style">Page One</a>
+              <a href="/page-two" class="btn-style">Page Two</a>
+            </div>
+          </div>
+          <div class="sidebar-box"></div>
+        </div>
+      </div>
+    </div>
 
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
 
-<style>
-	html, body {
-  margin: 0;
-  padding: 0;
-}
-  .page-background {
-	min-height: 100vh;
-	width: 100%;
-	background-color: rgb(131, 131, 131);
-  }
-  .content-wrapper {
-	min-height: 100vh;
-	max-width: 1000px;
-	margin: 0 auto;
-	background-color: rgb(255, 255, 255);
-  }
-    .header-box {
-    width: 100%;
-    height: 80px;
-    background-color: rgb(216, 216, 216);
-  }
-</style>
+      .page-background {
+        min-height: 100vh;
+        width: 100%;
+        background-color: rgb(131, 131, 131);
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .header-box {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(26, 45, 85);
+      }
+
+      .layout-grid {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        flex: 1;
+      }
+
+      .main-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 20px;
+        min-width: 0;
+      }
+
+      .page-buttons-box {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 0, 0);
+        border-radius: 100px;
+        width: 30%;
+        min-width: 0;
+      }
+
+      .btn-style {
+        display: inline-block;
+        background-color: steelblue;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+
+      .sidebar-box {
+        background-color: rgb(121, 128, 143);
+      }
+    </style>
+  </body>
 </html>
